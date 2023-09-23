@@ -42,6 +42,6 @@ parsedselectedChairs.takenChairs = takenChairs;
 localStorage.setItem('seance-data', JSON.stringify(parsedselectedChairs));
 document.querySelector(".acceptin-button").addEventListener("click", (event) => {
     event.preventDefault();
-    createRequest ('POST', 'https://jscp-diplom.netoserver.ru/', 'event=sale_add&timestamp=${parsedselectedChairs.seanceTimeStamp}&hallId=${parsedselectedChairs.hallId}&seanceId=${parsedselectedChairs.seanceId}&hallConfiguration=${newHallConfig}', 
+    createRequest ('POST', 'https://jscp-diplom.netoserver.ru/', `event=sale_add&timestamp=${parsedselectedChairs.seanceTimeStamp}&hallId=${parsedselectedChairs.hallId}&seanceId=${parsedselectedChairs.seanceId}&hallConfiguration=${newHallConfig}`, 
 console.log);
 });
